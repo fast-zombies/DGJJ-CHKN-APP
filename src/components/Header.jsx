@@ -13,8 +13,9 @@ import {
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
+import { Link } from 'react-router-dom'
 
-function Example() {
+function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -22,15 +23,11 @@ function Example() {
   return (
     <div>
       <Navbar>
-        <NavbarBrand /*link here*/
-        className="my-2"
-        color="dark"
-        dark
-    >   
+        <NavbarBrand /*nav link here*/  >   
     Chimken Brefkst 
         <img
         alt="logo"
-        // src="/logo...whatevea" fix logo into me
+        src="https://static.vecteezy.com/system/resources/previews/008/441/867/original/crispy-fried-chicken-leg-illustration-flat-icon-illustration-design-fast-food-fried-chicken-leg-flat-design-vector.jpg"
         style={{
             height: 40,
             width: 40
@@ -41,7 +38,7 @@ function Example() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/components/">Nav69</NavLink>
             </NavItem>
             <NavItem>
               <NavLink >
@@ -50,22 +47,22 @@ function Example() {
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Settings?
               </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
+              <DropdownMenu end>
+                <DropdownItem>Ratings</DropdownItem>
+                <DropdownItem>Profiles</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
+                <DropdownItem>Close</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>Cluck Cluck, motherf-</NavbarText>
         </Collapse>
       </Navbar>
     </div>
   );
 }
 
-export default Example;
+export default Header;
 
