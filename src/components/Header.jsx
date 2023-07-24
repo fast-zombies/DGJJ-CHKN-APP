@@ -22,11 +22,7 @@ function Header() {
   return (
     <div>
       <Navbar>
-        <NavbarBrand /*link here*/
-        className="my-2"
-        color="dark"
-        dark
-    >   
+        <NavbarBrand /*nav link here*/  >   
     Chimken Brefkst 
         <img
         alt="logo"
@@ -41,7 +37,7 @@ function Header() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/components/">Nav69</NavLink>
             </NavItem>
             <NavItem>
               <NavLink >
@@ -50,17 +46,17 @@ function Header() {
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Settings?
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
+                <DropdownItem>Ratings</DropdownItem>
+                <DropdownItem>Profiles</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
+                <DropdownItem>Close</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>Cluck Cluck, motherf-</NavbarText>
         </Collapse>
       </Navbar>
     </div>
