@@ -14,7 +14,7 @@ import {
   NavbarText,
 } from 'reactstrap';
 
-function Example() {
+function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -30,7 +30,7 @@ function Example() {
     Chimken Brefkst 
         <img
         alt="logo"
-        // src="/logo...whatevea" fix logo into me
+        src="https://static.vecteezy.com/system/resources/previews/008/441/867/original/crispy-fried-chicken-leg-illustration-flat-icon-illustration-design-fast-food-fried-chicken-leg-flat-design-vector.jpg"
         style={{
             height: 40,
             width: 40
@@ -67,5 +67,5 @@ function Example() {
   );
 }
 
-export default Example;
+export default Header;
 
