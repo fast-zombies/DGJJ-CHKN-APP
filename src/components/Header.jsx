@@ -13,40 +13,51 @@ import {
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 function Header() {
- const [collapseOpen, setCollapseOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
 
   return (
     <div>
-      <Navbar color="dark" dark>
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
-        <NavbarToggler onClick={() => setCollapseOpen(!collapseOpen)} />
-        <Collapse isOpen={collapseOpen} navbar>
+      <Navbar>
+        <NavbarBrand /*nav link here*/  >   
+    Chimken Brefkst 
+        <img
+        alt="logo"
+        src="https://static.vecteezy.com/system/resources/previews/008/441/867/original/crispy-fried-chicken-leg-illustration-flat-icon-illustration-design-fast-food-fried-chicken-leg-flat-design-vector.jpg"
+        style={{
+            height: 40,
+            width: 40
+        }}
+        />
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink tag={Link} to="/">Home</NavLink>
+              <NavLink href="/components/">Nav69</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={Link} to="/about">about</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={Link} to="/contact">contact</NavLink>
+              <NavLink >
+                Chimken
+              </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Settings?
               </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
+              <DropdownMenu end>
+                <DropdownItem>Ratings</DropdownItem>
+                <DropdownItem>Profiles</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
+                <DropdownItem>Close</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>Cluck Cluck, motherf-</NavbarText>
         </Collapse>
       </Navbar>
     </div>
@@ -54,3 +65,4 @@ function Header() {
 }
 
 export default Header;
+
